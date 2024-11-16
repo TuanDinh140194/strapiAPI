@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "transaction": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::transaction.transaction",
+      "inversedBy": "products"
+    },
+    "new": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::new.new",
+      "inversedBy": "products"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "products"
+    },
+    "UPC": {
+      "type": "biginteger"
+    },
+    "Quantity": {
+      "type": "integer"
+    },
+    "Price": {
+      "type": "decimal"
+    },
+    "Public": {
+      "type": "boolean"
+    },
+    "UID": {
+      "type": "uid"
+    }
+  }
+}
